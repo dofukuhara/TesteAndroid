@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_investment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                android:text="@string/investment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_invest_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                tools:text="Investment Title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_investment" />
+
+            <TextView
+                android:id="@+id/tv_fund_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                tools:text="Asset Name"
+                android:fontFamily="@font/dinprobold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_invest_title" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="@dimen/default_divider_width"
+                android:layout_height="@dimen/default_divider_height"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                android:background="?android:attr/listDivider"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fund_name" />
+
+            <TextView
+                android:id="@+id/tv_what_is"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                tools:text="What Is"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+            <TextView
+                android:id="@+id/tv_fund_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                tools:text="Asset Description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_what_is" />
+
+            <TextView
+                android:id="@+id/tv_risk_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                tools:text="Rist Title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fund_desc" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline10"
+                android:layout_width="@dimen/guideline_default_width"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.10" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline26"
+                app:layout_constraintBaseline_toBaselineOf="@+id/guideline10"
+                android:layout_width="@dimen/guideline_default_width"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.26" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline42"
+                app:layout_constraintBaseline_toBaselineOf="@+id/guideline10"
+                android:layout_width="@dimen/guideline_default_width"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.42" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline58"
+                app:layout_constraintBaseline_toBaselineOf="@+id/guideline10"
+                android:layout_width="@dimen/guideline_default_width"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.58" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline74"
+                app:layout_constraintBaseline_toBaselineOf="@+id/guideline10"
+                android:layout_width="@dimen/guideline_default_width"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.74" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline90"
+                android:layout_width="@dimen/guideline_default_width"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.90" />
+
+            <ImageView
+                android:id="@+id/image_arrow_1"
+                android:contentDescription="@string/risk_level_1"
+                android:visibility="invisible"
+                tools:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                app:layout_constraintEnd_toStartOf="@+id/guideline26"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/tv_risk_title"
+                app:srcCompat="@android:drawable/arrow_down_float" />
+
+            <ImageView
+                android:id="@+id/image_arrow_2"
+                android:contentDescription="@string/risk_level_2"
+                android:visibility="invisible"
+                tools:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                app:layout_constraintEnd_toStartOf="@+id/guideline42"
+                app:layout_constraintStart_toStartOf="@+id/guideline26"
+                app:layout_constraintTop_toBottomOf="@+id/tv_risk_title"
+                app:srcCompat="@android:drawable/arrow_down_float" />
+
+            <ImageView
+                android:id="@+id/image_arrow_3"
+                android:contentDescription="@string/risk_level_3"
+                android:visibility="invisible"
+                tools:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                app:layout_constraintEnd_toStartOf="@+id/guideline58"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toBottomOf="@+id/tv_risk_title"
+                app:srcCompat="@android:drawable/arrow_down_float" />
+
+            <ImageView
+                android:id="@+id/image_arrow_4"
+                android:contentDescription="@string/risk_level_4"
+                android:visibility="invisible"
+                tools:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                app:layout_constraintEnd_toStartOf="@+id/guideline74"
+                app:layout_constraintStart_toStartOf="@+id/guideline58"
+                app:layout_constraintTop_toBottomOf="@+id/tv_risk_title"
+                app:srcCompat="@android:drawable/arrow_down_float" />
+
+            <ImageView
+                android:id="@+id/image_arrow_5"
+                android:contentDescription="@string/risk_level_5"
+                android:visibility="invisible"
+                tools:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                app:layout_constraintEnd_toStartOf="@+id/guideline90"
+                app:layout_constraintStart_toStartOf="@+id/guideline74"
+                app:layout_constraintTop_toBottomOf="@+id/tv_risk_title"
+                app:srcCompat="@android:drawable/arrow_down_float" />
+
+            <View
+                android:id="@+id/image_bar_1"
+                android:layout_width="@dimen/image_bar_default_width"
+                android:layout_height="@dimen/image_bar_default_height"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:background="@color/custom_light_green"
+                app:layout_constraintEnd_toStartOf="@+id/guideline26"
+                app:layout_constraintStart_toStartOf="@+id/guideline10"
+                app:layout_constraintTop_toBottomOf="@+id/image_arrow_1" />
+
+            <View
+                android:id="@+id/image_bar_2"
+                android:layout_width="@dimen/image_bar_default_width"
+                android:layout_height="@dimen/image_bar_default_height"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:background="@color/custom_dark_green"
+                app:layout_constraintEnd_toStartOf="@+id/guideline42"
+                app:layout_constraintStart_toStartOf="@+id/guideline26"
+                app:layout_constraintTop_toBottomOf="@+id/image_arrow_2" />
+
+            <View
+                android:id="@+id/image_bar_3"
+                android:layout_width="@dimen/image_bar_default_width"
+                android:layout_height="@dimen/image_bar_default_height"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:background="@color/custom_yellow"
+                app:layout_constraintEnd_toStartOf="@+id/guideline58"
+                app:layout_constraintStart_toStartOf="@+id/guideline42"
+                app:layout_constraintTop_toBottomOf="@+id/image_arrow_3" />
+
+            <View
+                android:id="@+id/image_bar_4"
+                android:layout_width="@dimen/image_bar_default_width"
+                android:layout_height="@dimen/image_bar_default_height"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:background="@color/custom_orange"
+                app:layout_constraintEnd_toStartOf="@+id/guideline74"
+                app:layout_constraintStart_toStartOf="@+id/guideline58"
+                app:layout_constraintTop_toBottomOf="@+id/image_arrow_4" />
+
+            <View
+                android:id="@+id/image_bar_5"
+                android:layout_width="@dimen/image_bar_default_width"
+                android:layout_height="@dimen/image_bar_default_height"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:background="@color/custom_red"
+                app:layout_constraintEnd_toStartOf="@+id/guideline90"
+                app:layout_constraintStart_toStartOf="@+id/guideline74"
+                app:layout_constraintTop_toBottomOf="@+id/image_arrow_5" />
+
+            <TextView
+                android:id="@+id/tv_more_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                tools:text="More Info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_bar_3" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline50"
+                android:layout_width="@dimen/guideline_default_width"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.50" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline75"
+                android:layout_width="@dimen/guideline_default_width"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.75" />
+
+            <TextView
+                android:id="@+id/tv_fund_rent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                android:text="@string/fund_rent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline75"
+                app:layout_constraintStart_toStartOf="@+id/guideline50"
+                app:layout_constraintTop_toBottomOf="@+id/tv_more_info" />
+
+            <TextView
+                android:id="@+id/tv_cdi_rent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                android:text="@string/cdi_rent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline75"
+                app:layout_constraintTop_toBottomOf="@+id/tv_more_info" />
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="@dimen/width_match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                android:text="@string/fund_month"
+                app:layout_constraintEnd_toStartOf="@+id/guideline50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fund_rent" />
+
+            <TextView
+                android:id="@+id/tv_month_fund"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                tools:text="Asset Month Rent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline75"
+                app:layout_constraintStart_toStartOf="@+id/guideline50"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fund_rent" />
+
+            <TextView
+                android:id="@+id/tv_month_cdi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                tools:text="CDI Month Rent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline75"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cdi_rent" />
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="@dimen/width_match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                android:text="@string/fund_year"
+                app:layout_constraintEnd_toStartOf="@+id/guideline50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_month" />
+
+            <TextView
+                android:id="@+id/tv_year_fund"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                tools:text="Asset Year Rent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline75"
+                app:layout_constraintStart_toStartOf="@+id/guideline50"
+                app:layout_constraintTop_toBottomOf="@+id/tv_month_fund" />
+
+            <TextView
+                android:id="@+id/tv_year_cdi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                tools:text="CDI Year Rent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline75"
+                app:layout_constraintTop_toBottomOf="@+id/tv_month_cdi" />
+
+            <TextView
+                android:id="@+id/tv_twelvemonths"
+                android:layout_width="@dimen/width_match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                android:text="@string/fund_twelvemonths"
+                app:layout_constraintEnd_toStartOf="@+id/guideline50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_year" />
+
+            <TextView
+                android:id="@+id/tv_twelvemonths_fund"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                tools:text="Asset 12 M. Rent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline75"
+                app:layout_constraintStart_toStartOf="@+id/guideline50"
+                app:layout_constraintTop_toBottomOf="@+id/tv_year_fund" />
+
+            <TextView
+                android:id="@+id/tv_twelvemonths_cdi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                tools:text="CDI 12 M. Rent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline75"
+                app:layout_constraintTop_toBottomOf="@+id/tv_year_cdi" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="@dimen/default_divider_width"
+                android:layout_height="@dimen/default_divider_height"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                android:background="?android:attr/listDivider"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_twelvemonths" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lv_fund_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                android:layout_marginBottom="@dimen/default_margin_bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_twelvemonths_fund" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lv_fund_down"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                android:layout_marginBottom="@dimen/default_margin_bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lv_fund_info" />
+
+            <Button
+                android:id="@+id/btn_invest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                android:text="@string/to_invest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lv_fund_down"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

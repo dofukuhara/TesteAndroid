@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Investment App</string>
+    <string name="investment">Investment</string>
+    <string name="contact">Contact</string>
+    <string name="to_invest">Invest</string>
+    <string name="fund_rent">Asset</string>
+    <string name="cdi_rent">CDI</string>
+    <string name="fund_month">On Month</string>
+    <string name="fund_year">On Year</string>
+    <string name="fund_twelvemonths">12 Months</string>
+    <string name="fund_applied">Asset %1$s applied into your account successfully!</string>
+    <string name="risk_level_1">Risk Level 1</string>
+    <string name="risk_level_2">Risk Level 2</string>
+    <string name="risk_level_3">Risk Level 3</string>
+    <string name="risk_level_4">Risk Level 4</string>
+    <string name="risk_level_5">Risk Level 5</string>
+    <string name="btn_download">Download</string>
+</resources>

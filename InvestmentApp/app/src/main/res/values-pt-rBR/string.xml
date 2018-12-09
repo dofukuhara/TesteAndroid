@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App de Investimentos</string>
+    <string name="investment">Investimento</string>
+    <string name="to_invest">Investir</string>
+    <string name="contact">Contato</string>
+    <string name="fund_rent">Fundo</string>
+    <string name="cdi_rent">CDI</string>
+    <string name="fund_month">No mês</string>
+    <string name="fund_year">No Ano</string>
+    <string name="fund_twelvemonths">12 Meses</string>
+    <string name="fund_applied">Fundo %1$s aplicado em sua conta com sucesso!</string>
+    <string name="risk_level_1">Risco Nível 1</string>
+    <string name="risk_level_2">Risco Nível 2</string>
+    <string name="risk_level_3">Risco Nível 3</string>
+    <string name="risk_level_4">Risco Nível 4</string>
+    <string name="risk_level_5">Risco Nível 5</string>
+    <string name="btn_download">Baixar</string>
+</resources>
