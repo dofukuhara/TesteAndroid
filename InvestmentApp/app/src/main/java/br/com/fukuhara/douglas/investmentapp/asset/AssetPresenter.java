@@ -1,6 +1,7 @@
 package br.com.fukuhara.douglas.investmentapp.asset;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import br.com.fukuhara.douglas.investmentapp.R;
 import br.com.fukuhara.douglas.investmentapp.domain.Screen;
