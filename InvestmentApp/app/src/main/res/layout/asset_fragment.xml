@@ -5,7 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/pg_asset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/asset_no_internet"
+            android:layout_width="@dimen/width_match_constraint"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/no_internet_connect"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/assetFragmentConstraintLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -28,10 +50,10 @@
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
-                tools:text="Investment Title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_investment" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_investment"
+                tools:text="Investment Title" />
 
             <TextView
                 android:id="@+id/tv_fund_name"
@@ -40,11 +62,11 @@
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
-                tools:text="Asset Name"
                 android:fontFamily="@font/dinprobold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_invest_title" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_invest_title"
+                tools:text="Asset Name" />
 
             <View
                 android:id="@+id/divider1"
@@ -66,10 +88,10 @@
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
-                tools:text="What Is"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider1" />
+                app:layout_constraintTop_toBottomOf="@+id/divider1"
+                tools:text="What Is" />
 
             <TextView
                 android:id="@+id/tv_fund_desc"
@@ -78,10 +100,10 @@
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
-                tools:text="Asset Description"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_what_is" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_what_is"
+                tools:text="Asset Description" />
 
             <TextView
                 android:id="@+id/tv_risk_title"
@@ -90,10 +112,10 @@
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
-                tools:text="Rist Title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_fund_desc" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_fund_desc"
+                tools:text="Rist Title" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline10"
@@ -104,34 +126,34 @@
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline26"
-                app:layout_constraintBaseline_toBaselineOf="@+id/guideline10"
                 android:layout_width="@dimen/guideline_default_width"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                app:layout_constraintBaseline_toBaselineOf="@+id/guideline10"
                 app:layout_constraintGuide_percent="0.26" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline42"
-                app:layout_constraintBaseline_toBaselineOf="@+id/guideline10"
                 android:layout_width="@dimen/guideline_default_width"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                app:layout_constraintBaseline_toBaselineOf="@+id/guideline10"
                 app:layout_constraintGuide_percent="0.42" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline58"
-                app:layout_constraintBaseline_toBaselineOf="@+id/guideline10"
                 android:layout_width="@dimen/guideline_default_width"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                app:layout_constraintBaseline_toBaselineOf="@+id/guideline10"
                 app:layout_constraintGuide_percent="0.58" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline74"
-                app:layout_constraintBaseline_toBaselineOf="@+id/guideline10"
                 android:layout_width="@dimen/guideline_default_width"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                app:layout_constraintBaseline_toBaselineOf="@+id/guideline10"
                 app:layout_constraintGuide_percent="0.74" />
 
             <android.support.constraint.Guideline
@@ -143,78 +165,78 @@
 
             <ImageView
                 android:id="@+id/image_arrow_1"
-                android:contentDescription="@string/risk_level_1"
-                android:visibility="invisible"
-                tools:visibility="visible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
+                android:contentDescription="@string/risk_level_1"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@+id/guideline26"
                 app:layout_constraintStart_toStartOf="@+id/guideline10"
                 app:layout_constraintTop_toBottomOf="@+id/tv_risk_title"
-                app:srcCompat="@android:drawable/arrow_down_float" />
+                app:srcCompat="@android:drawable/arrow_down_float"
+                tools:visibility="visible" />
 
             <ImageView
                 android:id="@+id/image_arrow_2"
-                android:contentDescription="@string/risk_level_2"
-                android:visibility="invisible"
-                tools:visibility="visible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
+                android:contentDescription="@string/risk_level_2"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@+id/guideline42"
                 app:layout_constraintStart_toStartOf="@+id/guideline26"
                 app:layout_constraintTop_toBottomOf="@+id/tv_risk_title"
-                app:srcCompat="@android:drawable/arrow_down_float" />
+                app:srcCompat="@android:drawable/arrow_down_float"
+                tools:visibility="visible" />
 
             <ImageView
                 android:id="@+id/image_arrow_3"
-                android:contentDescription="@string/risk_level_3"
-                android:visibility="invisible"
-                tools:visibility="visible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
+                android:contentDescription="@string/risk_level_3"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@+id/guideline58"
                 app:layout_constraintStart_toStartOf="@+id/guideline42"
                 app:layout_constraintTop_toBottomOf="@+id/tv_risk_title"
-                app:srcCompat="@android:drawable/arrow_down_float" />
+                app:srcCompat="@android:drawable/arrow_down_float"
+                tools:visibility="visible" />
 
             <ImageView
                 android:id="@+id/image_arrow_4"
-                android:contentDescription="@string/risk_level_4"
-                android:visibility="invisible"
-                tools:visibility="visible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
+                android:contentDescription="@string/risk_level_4"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@+id/guideline74"
                 app:layout_constraintStart_toStartOf="@+id/guideline58"
                 app:layout_constraintTop_toBottomOf="@+id/tv_risk_title"
-                app:srcCompat="@android:drawable/arrow_down_float" />
+                app:srcCompat="@android:drawable/arrow_down_float"
+                tools:visibility="visible" />
 
             <ImageView
                 android:id="@+id/image_arrow_5"
-                android:contentDescription="@string/risk_level_5"
-                android:visibility="invisible"
-                tools:visibility="visible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
+                android:contentDescription="@string/risk_level_5"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@+id/guideline90"
                 app:layout_constraintStart_toStartOf="@+id/guideline74"
                 app:layout_constraintTop_toBottomOf="@+id/tv_risk_title"
-                app:srcCompat="@android:drawable/arrow_down_float" />
+                app:srcCompat="@android:drawable/arrow_down_float"
+                tools:visibility="visible" />
 
             <View
                 android:id="@+id/image_bar_1"
@@ -273,10 +295,10 @@
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
-                tools:text="More Info"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/image_bar_3" />
+                app:layout_constraintTop_toBottomOf="@+id/image_bar_3"
+                tools:text="More Info" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline50"
@@ -335,10 +357,10 @@
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
-                tools:text="Asset Month Rent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline75"
                 app:layout_constraintStart_toStartOf="@+id/guideline50"
-                app:layout_constraintTop_toBottomOf="@+id/tv_fund_rent" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_fund_rent"
+                tools:text="Asset Month Rent" />
 
             <TextView
                 android:id="@+id/tv_month_cdi"
@@ -347,10 +369,10 @@
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
-                tools:text="CDI Month Rent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline75"
-                app:layout_constraintTop_toBottomOf="@+id/tv_cdi_rent" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_cdi_rent"
+                tools:text="CDI Month Rent" />
 
             <TextView
                 android:id="@+id/tv_year"
@@ -371,10 +393,10 @@
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
-                tools:text="Asset Year Rent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline75"
                 app:layout_constraintStart_toStartOf="@+id/guideline50"
-                app:layout_constraintTop_toBottomOf="@+id/tv_month_fund" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_month_fund"
+                tools:text="Asset Year Rent" />
 
             <TextView
                 android:id="@+id/tv_year_cdi"
@@ -383,10 +405,10 @@
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
-                tools:text="CDI Year Rent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline75"
-                app:layout_constraintTop_toBottomOf="@+id/tv_month_cdi" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_month_cdi"
+                tools:text="CDI Year Rent" />
 
             <TextView
                 android:id="@+id/tv_twelvemonths"
@@ -407,10 +429,10 @@
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
-                tools:text="Asset 12 M. Rent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline75"
                 app:layout_constraintStart_toStartOf="@+id/guideline50"
-                app:layout_constraintTop_toBottomOf="@+id/tv_year_fund" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_year_fund"
+                tools:text="Asset 12 M. Rent" />
 
             <TextView
                 android:id="@+id/tv_twelvemonths_cdi"
@@ -419,10 +441,10 @@
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
-                tools:text="CDI 12 M. Rent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline75"
-                app:layout_constraintTop_toBottomOf="@+id/tv_year_cdi" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_year_cdi"
+                tools:text="CDI 12 M. Rent" />
 
             <View
                 android:id="@+id/divider2"
@@ -469,11 +491,11 @@
                 android:layout_marginTop="@dimen/default_margin_top"
                 android:layout_marginEnd="@dimen/default_margin_end"
                 android:text="@string/to_invest"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lv_fund_down"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@+id/lv_fund_down" />
 
         </android.support.constraint.ConstraintLayout>
-
+    </android.support.constraint.ConstraintLayout>
 </ScrollView>

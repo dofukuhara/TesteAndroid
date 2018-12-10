@@ -16,4 +16,10 @@
     <string name="risk_level_4">Risco Nível 4</string>
     <string name="risk_level_5">Risco Nível 5</string>
     <string name="btn_download">Baixar</string>
+    <string name="contact_header">Contato</string>
+    <string name="name_not_valid">Nome não está em formato válido, tente novamente!</string>
+    <string name="email_not_valid">Email não está em formato válido, tente novamente!</string>
+    <string name="phone_not_valid">Phone não está em formato válido, tente novamente!</string>
+    <string name="all_fields_ok">Todos os campos estão OK! Vamos abrir a tela de mensagem de sucesso!</string>
+    <string name="no_internet_connect">Não há conexão com a Internet. Favor verificar o acesso antes de utilizar este app!</string>
 </resources>

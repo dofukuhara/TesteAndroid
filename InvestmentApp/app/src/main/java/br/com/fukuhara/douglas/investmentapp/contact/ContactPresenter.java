@@ -1,7 +1,6 @@
 package br.com.fukuhara.douglas.investmentapp.contact;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -25,22 +24,24 @@ public class ContactPresenter implements ContactContract.Presenter {
     public void inflateUiWithCellInformation(ArrayList<CellItem> cells) {
         mCells = cells;
 
-        // TODO: update UI with Cell content
+        mContactView.updateUiWithCellsInfo(mCells);
     }
 
     @Override
     public void notifyAboutDownloadError(Throwable error) {
-        // TODO: Implement the user notificaion about a download failure of Cells info
+        mContactView.internetConnectionError();
     }
 
     @Override
     public void start(Bundle savedInstanceState) {
+        mContactView.hideLayoutUntilCompletion();
         if (savedInstanceState != null &&
                 savedInstanceState.containsKey(ContactContract.View.SAVED_STATE_BUNDLE_CELLS_KEY)) {
 
             mCells = savedInstanceState.getParcelableArrayList(
                     ContactContract.View.SAVED_STATE_BUNDLE_CELLS_KEY);
-            // TODO: update UI with Cell content
+
+            mContactView.updateUiWithCellsInfo(mCells);
 
         } else {
             mContactModel.getCellsDefinitionJson();
@@ -50,5 +51,15 @@ public class ContactPresenter implements ContactContract.Presenter {
     @Override
     public ArrayList<CellItem> getCells() {
         return this.mCells;
+    }
+
+    @Override
+    public void validateParams(String name, String email, String phone) {
+
+        boolean isNameOk = name != null && ContactFieldValidator.isNameValid(name);
+        boolean isEmailOk = email != null && ContactFieldValidator.isEmailValid(email);
+        boolean isPhoneOk = phone != null && ContactFieldValidator.isPhoneValid(phone);
+
+        mContactView.paramsValidated(isNameOk, isEmailOk, isPhoneOk);
     }
 }

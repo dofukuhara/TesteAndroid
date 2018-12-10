@@ -41,5 +41,8 @@ public interface AssetContract {
         // Function used by PRESENTER in order to send a message to end-user via Toast
         void notifyUserWithToastMessage(String message);
         void notifyUserWithToastMessage(int stringId, String... message);
+
+        void hideLayoutUntilCompletion();
+        void internetConnectionError();
     }
 }

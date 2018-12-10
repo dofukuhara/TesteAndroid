@@ -3,6 +3,7 @@ package br.com.fukuhara.douglas.investmentapp.asset;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +28,13 @@ import butterknife.ButterKnife;
 public class AssetFragment extends Fragment implements AssetContract.View {
 
     private AssetContract.Presenter mPresenter;
+
+    @BindView(R.id.assetFragmentConstraintLayout)
+    ConstraintLayout assetFragmentConstraintLayout;
+    @BindView(R.id.pg_asset)
+    ProgressBar pgAsset;
+    @BindView(R.id.asset_no_internet)
+    TextView tvAssetNoInternet;
 
     @BindView(R.id.tv_invest_title)
     TextView tvInvestTitle;
@@ -93,6 +102,7 @@ public class AssetFragment extends Fragment implements AssetContract.View {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+
         View root = inflater.inflate(R.layout.asset_fragment, container, false);
         ButterKnife.bind(this, root);
 
@@ -104,7 +114,7 @@ public class AssetFragment extends Fragment implements AssetContract.View {
         super.onActivityCreated(savedInstanceState);
 
         // Requesting Presenter to get the Screen info, so that the UI can be properly populated
-        mPresenter.start( savedInstanceState );
+        mPresenter.start(savedInstanceState);
     }
 
     @Override
@@ -165,6 +175,8 @@ public class AssetFragment extends Fragment implements AssetContract.View {
                 mPresenter.investInThis(screen.getFundName());
             }
         });
+
+        unhideLayout();
     }
 
     public void drawRiskLevel(int risk) {
@@ -189,5 +201,26 @@ public class AssetFragment extends Fragment implements AssetContract.View {
     @Override
     public void notifyUserWithToastMessage(int stringId, String... message) {
         Toast.makeText(getActivity(), getString(stringId, message), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void hideLayoutUntilCompletion() {
+        tvAssetNoInternet.setVisibility(View.INVISIBLE);
+        pgAsset.setVisibility(View.VISIBLE);
+        assetFragmentConstraintLayout.setVisibility(View.INVISIBLE);
+    }
+
+    private void unhideLayout() {
+        tvAssetNoInternet.setVisibility(View.INVISIBLE);
+        pgAsset.setVisibility(View.INVISIBLE);
+        assetFragmentConstraintLayout.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void internetConnectionError() {
+        pgAsset.setVisibility(View.INVISIBLE);
+        assetFragmentConstraintLayout.setVisibility(View.INVISIBLE);
+        tvAssetNoInternet.setVisibility(View.VISIBLE);
+
     }
 }

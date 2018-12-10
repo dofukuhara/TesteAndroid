@@ -33,25 +33,23 @@ public class CellItem implements Parcelable {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getType() {
         return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getMessage() {
         return message;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
+    public String getTypeField() { return typefield; }
+
+    public String getHidden() { return hidden; }
+
+    public String getTopSpacing() { return topSpacing; }
+
+    public String getShow() { return show; }
+
+    public String getRequired() { return required; }
 
     @Override
     public String toString() {

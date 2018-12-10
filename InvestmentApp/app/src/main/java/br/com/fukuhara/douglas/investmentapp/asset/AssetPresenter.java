@@ -1,7 +1,6 @@
 package br.com.fukuhara.douglas.investmentapp.asset;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import br.com.fukuhara.douglas.investmentapp.R;
 import br.com.fukuhara.douglas.investmentapp.domain.Screen;
@@ -26,6 +25,8 @@ public class AssetPresenter implements AssetContract.Presenter {
 
     @Override
     public void start(Bundle savedInstanceState) {
+        mAssetView.hideLayoutUntilCompletion();
+
         // If the Screen info is saved in bundle (offline cache), we can retrive the data from it, without the need
         // of re-fetching for this data again when rotating the device
         if (savedInstanceState != null &&
@@ -62,6 +63,6 @@ public class AssetPresenter implements AssetContract.Presenter {
     // Return from RetroFit's callback function when the request got a failure
     @Override
     public void notifyAboutDownloadError(Throwable error) {
-        // TODO: Implement the user notification about a download failure of Screen info
+        mAssetView.internetConnectionError();
     }
 }

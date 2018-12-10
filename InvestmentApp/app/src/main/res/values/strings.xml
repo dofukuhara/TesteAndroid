@@ -15,4 +15,10 @@
     <string name="risk_level_4">Risk Level 4</string>
     <string name="risk_level_5">Risk Level 5</string>
     <string name="btn_download">Download</string>
+    <string name="contact_header">Contact</string>
+    <string name="name_not_valid">Name is not valid, please try it again!</string>
+    <string name="email_not_valid">Email is not valid, please try it again!</string>
+    <string name="phone_not_valid">Phone is not valid, please try it again!</string>
+    <string name="all_fields_ok">All fields are filled as required, lets open the success screen!</string>
+    <string name="no_internet_connect">There is no Internet Connection. Please check it prior to use this app!</string>
 </resources>

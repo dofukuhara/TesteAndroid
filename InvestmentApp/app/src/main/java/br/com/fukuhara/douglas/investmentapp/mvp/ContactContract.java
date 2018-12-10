@@ -29,6 +29,7 @@ public interface ContactContract {
         // Return the cell arraylist object, so that it can be saved in the savedInstanceState bundle
         ArrayList<CellItem> getCells();
 
+        void validateParams(String name, String email, String phone);
     }
 
     interface View {
@@ -37,5 +38,11 @@ public interface ContactContract {
 
         // Set the a presenter instance to View obj
         void setPresenter(Presenter presenter);
+        // Update UI with the contents from cells JSON
+        void updateUiWithCellsInfo(ArrayList<CellItem> cells);
+
+        void hideLayoutUntilCompletion();
+        void paramsValidated(boolean isNameOk, boolean isEmailOk, boolean isPhoneOk);
+        void internetConnectionError();
     }
 }

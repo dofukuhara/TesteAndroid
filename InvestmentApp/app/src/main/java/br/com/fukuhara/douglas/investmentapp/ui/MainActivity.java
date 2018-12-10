@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_contact)
     Button btnContact;
 
+    // true --> Contact Screen
+    // false --> Investment Screen
+    private boolean mFlowControl;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +39,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
+
+
+        if (savedInstanceState != null &&
+                savedInstanceState.containsKey("flow-control")) {
+            mFlowControl = savedInstanceState.getBoolean("flow-control");
+        } else {
+            mFlowControl = true;
+        }
+
+        changeButtonsLayout(mFlowControl);
 
         // Create an instance of AssetFragment
         AssetFragment assetFragment =
@@ -60,7 +74,9 @@ public class MainActivity extends AppCompatActivity {
 
             transaction.replace(R.id.contactFrame, contactFragment, "fragment-contact");
             transaction.disallowAddToBackStack();
+            transaction.remove(assetFragment);
             transaction.commit();
+
         }
 
         // Create the Presenter objects and pass the View instance to it
@@ -81,6 +97,13 @@ public class MainActivity extends AppCompatActivity {
                 transaction.disallowAddToBackStack();
                 transaction.remove(finalAssetFragment);
                 transaction.commit();
+
+                if (mFlowControl == false) {
+                    mFlowControl = !mFlowControl;
+
+                    changeButtonsLayout(mFlowControl);
+                }
+
             }
         });
 
@@ -91,11 +114,39 @@ public class MainActivity extends AppCompatActivity {
 
                 transaction.replace(R.id.contentFrame, finalAssetFragment, "fragment-asset");
                 transaction.disallowAddToBackStack();
+                transaction.remove(finalContactFragment);
                 transaction.commit();
 
+                if (mFlowControl == true) {
+                    mFlowControl = !mFlowControl;
+
+                    changeButtonsLayout(mFlowControl);
+                }
             }
         });
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+
+        outState.putBoolean("flow-control", mFlowControl);
+
+        super.onSaveInstanceState(outState);
+    }
+
+    private void changeButtonsLayout(boolean flowControl) {
+        if (flowControl) {
+            btnInvest.setBackgroundColor(getResources().getColor(R.color.primaryLightColor));
+            btnInvest.setTextColor(getResources().getColor(android.R.color.white));
+            btnContact.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            btnContact.setTextColor(getResources().getColor(android.R.color.white));
+        } else {
+            btnInvest.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            btnInvest.setTextColor(getResources().getColor(android.R.color.white));
+            btnContact.setBackgroundColor(getResources().getColor(R.color.primaryLightColor));
+            btnContact.setTextColor(getResources().getColor(android.R.color.white));
+        }
     }
 
 }
